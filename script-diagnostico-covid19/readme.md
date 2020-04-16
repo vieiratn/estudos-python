@@ -40,4 +40,4 @@ No momento, não tenho qualquer pretensão de disponibilizar ao público a aplic
 
 ## Observação Importante:
 
-Sou um pequeno gafanhoto e comecei a aprender sobre programação durante a quarentena em 2020, portanto, pense antes de criticar de forma não-construtiva.
+> Sou um pequeno gafanhoto e comecei a aprender sobre programação durante a quarentena em 2020, portanto, pense antes de criticar de forma não-construtiva.
