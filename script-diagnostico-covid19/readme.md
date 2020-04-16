@@ -34,7 +34,7 @@ O Script é formado por três arquivos:
 
 ## Considerações Finais
 
-No momento, ão tenho qualquer pretensão de disponibilizar ao público a aplicação, até por não ter experiência em outras linguagens e pacotes, porém, pretendo apresentar melhorias e fornecer manutenção ao código com o intuito de melhorar e aprofundar meus conhecimentos sobre programação.
+No momento, não tenho qualquer pretensão de disponibilizar ao público a aplicação, até por não ter experiência em outras linguagens e pacotes, porém, pretendo apresentar melhorias e fornecer manutenção ao código com o intuito de melhorar e aprofundar meus conhecimentos sobre programação.
 
 **Sinta-se completamente à vontade para sugerir melhorias e estudar os códigos.**
 
