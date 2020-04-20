@@ -47,3 +47,5 @@ No momento, não tenho qualquer pretensão de disponibilizar ao público a aplic
 >> **Primeira Melhoria**: Ajuste no Script para não aceitar idades em valores zero ou negativos.
 
 >> **Segunda Melhoria**: Ajuste no Script e criação do arquivo de log de erros para acompanhar a usabilidade e implementar melhorias baseadas nos erros apresentados durante uso.
+
+>> **Terceira Melhoria**: Ajuste no Script para não aceitar números e caracteres especiais no campo nome.
