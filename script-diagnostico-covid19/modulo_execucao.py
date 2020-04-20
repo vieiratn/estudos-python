@@ -9,7 +9,12 @@ doenças = list()
 # Coleta de Dados e Inserção em Dicionário e Lista
 def dadospessoais():
     dados['nome'] = str(input('Informe o seu nome: ')).strip().upper()
-    dados['idade'] = int(input(f'{dados["nome"]}, informe a sua idade (em anos): '))
+    while True:
+        dados['idade'] = int(input(f'{dados["nome"]}, informe a sua idade (em anos): '))
+        if dados['idade'] >= 1 and dados['idade'] < 120:
+            break
+        else:
+            modulo_mensagens.errodado()
     while True:
         dados['fumante'] = str(input(f'{dados["nome"]}, você é fumante [s/n]: ')).strip().upper()[0]
         if dados['fumante'] in 'SN':
