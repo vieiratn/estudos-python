@@ -119,3 +119,8 @@ def análise3():
             modulo_mensagens.msgsemsintomas()
         if sintomasleves == 1 or sintomasleves == 2:
             modulo_mensagens.msgsintomasleves()
+
+
+def log_erro(msg):
+    with open('log_erro.txt', 'a+') as file:
+        file.write(f'{msg}\n')

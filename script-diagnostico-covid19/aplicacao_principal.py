@@ -11,8 +11,9 @@ try:
     modulo_mensagens.títulos(f'SINTOMAS APRESENTADOS')
     modulo_execucao.dadossintomas()
 
-except:
+except Exception as erro:
     modulo_mensagens.errogenerico()
+    modulo_execucao.log_erro(erro)
 
 else:
     modulo_mensagens.títulos(f'RELATÓRIO DOS DADOS INFORMADOS')
