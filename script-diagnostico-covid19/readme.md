@@ -41,3 +41,9 @@ No momento, não tenho qualquer pretensão de disponibilizar ao público a aplic
 ## Observação Importante:
 
 > Sou um pequeno gafanhoto e comecei a aprender sobre programação durante a quarentena em 2020, portanto, pense antes de criticar de forma não-construtiva.
+
+## Notas de Manutenção:
+
+>> **Primeira Melhoria**: Ajuste no Script para não aceitar idades em valores zero ou negativos.
+
+>> **Segunda Melhoria**: Ajuste no Script e criação do arquivo de log de erros para acompanhar a usabilidade e implementar melhorias baseadas nos erros apresentados durante uso.
