@@ -1,5 +1,8 @@
+
+import string
 # Importação da Biblioteca de Mensagens
 import modulo_mensagens
+from conexao_db import Gravar_dados
 
 # Dicionário e Listas (Informações dos Pacientes)
 dados = dict()
@@ -8,26 +11,29 @@ doenças = list()
 
 # Coleta de Dados e Inserção em Dicionário e Lista
 def dadospessoais():
-    while True:
-        nome = str(input('Informe o seu nome: ')).strip().upper()
-        if nome.isalpha() is True:
-            dados['nome'] = nome
-            break
-        else:
-            modulo_mensagens.errodado()
-    while True:
-        dados['idade'] = int(input(f'{dados["nome"]}, informe a sua idade (em anos): '))
-        if dados['idade'] >= 1 and dados['idade'] < 120:
-            break
-        else:
-            modulo_mensagens.errodado()
-    while True:
-        dados['fumante'] = str(input(f'{dados["nome"]}, você é fumante [s/n]: ')).strip().upper()[0]
-        if dados['fumante'] in 'SN':
-            break
-        else:
-            modulo_mensagens.errodado()
 
+    while True:
+        try:
+            nome = input('Informe seu Nome: ').upper()
+            if not any(chr.isdigit() for chr in nome) and not any(chr in string.punctuation for chr in nome):
+                dados['nome']=nome
+            else:                
+                continue
+            idade = int(input(f"{nome}, informe a sua idade: "))
+            if idade >0 and idade < 120:
+                dados['idade']=idade
+            else:                
+                continue
+            fumante = input(f'{nome}, você é fumante? [s/n]: ').upper()
+            if fumante in 'SN' and fumante != '':
+                dados['fumante']=fumante
+                break
+            else:
+                continue
+        except Exception as e:
+            print(e)
+
+ 
 
 def dadosdoenças():
     while True:
@@ -82,15 +88,15 @@ def análise1():
     if dados['idade'] >= 60:
         modulo_mensagens.grim60()
         if dados['fumante'] == 'S':
-            modulo_mensagens.msgfumantes()
+            print(modulo_mensagens.msgfumantes())
         else:
-            modulo_mensagens.msgfumanten()
+            print(modulo_mensagens.msgfumanten())
     else:
         modulo_mensagens.gri()
         if dados['fumante'] == 'S':
-            modulo_mensagens.msgfumantes()
+            print(modulo_mensagens.msgfumantes())
         else:
-            modulo_mensagens.msgfumanten()
+            print(modulo_mensagens.msgfumanten())
 
 
 def análise2():
@@ -101,9 +107,9 @@ def análise2():
     if dados['diabetes'] == 'S':
         doenças.append(str('DIABETES'))
     if doenças == []:
-        modulo_mensagens.msgdoencasn()
+        print(modulo_mensagens.msgdoencasn())
     else:
-        modulo_mensagens.msgdoencass()
+        print(modulo_mensagens.msgdoencass())
 
 
 def análise3():
@@ -113,7 +119,9 @@ def análise3():
     if dados['respiração'] == 'S':
         sintomasgraves += 1
     if sintomasgraves == 1 or sintomasgraves == 2:
-        modulo_mensagens.msgsintomasgraves()
+        msg = modulo_mensagens.msgsintomasgraves()
+        print(msg)
+        Gravar_dados(dados['nome'], dados['idade'], dados['fumante'], msg)
 
     if dados['febre'] == 'N' and dados['respiração'] == 'N':
         sintomasleves = 0
@@ -122,9 +130,15 @@ def análise3():
         if dados['cansaço'] == 'S':
             sintomasleves += 1
         if sintomasleves == 0:
-            modulo_mensagens.msgsemsintomas()
+            msg = modulo_mensagens.msgsemsintomas()
+            print(msg)
+            Gravar_dados(dados['nome'], dados['idade'], dados['fumante'], msg)
+                
         if sintomasleves == 1 or sintomasleves == 2:
-            modulo_mensagens.msgsintomasleves()
+            msg = modulo_mensagens.msgsintomasleves()
+            print(msg)
+            Gravar_dados(dados['nome'], dados['idade'], dados['fumante'], msg)
+         
 
 
 def log_erro(msg):
