@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 # Importação do Módulo
 import modulo_execucao
 import modulo_mensagens

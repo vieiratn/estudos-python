@@ -1,2 +1,6 @@
 invalid literal for int() with base 10: 'qqqq'
 invalid literal for int() with base 10: 'qqq'
+'int' object has no attribute 'isdigit'
+'int' object has no attribute 'isdigit'
+invalid literal for int() with base 10: 'a'
+string index out of range

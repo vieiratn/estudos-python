@@ -40,25 +40,25 @@ def msgdoencasn():
 
 
 def msgsintomasgraves():
-    print(f'=> \033[1:31mVocê apresenta sérios sintomas que podem indicar Covid-19. \n'
+    return(f'=> \033[1:31mVocê apresenta sérios sintomas que podem indicar Covid-19. \n'
           f'    Procure imediatamente um ponto de atendimento e relate seus sintomas. \n'
           f'    Cuide-se, pois, o seu quadro pode se agravar rapidamente!\033[m')
 
 
 def msgsintomasleves():
-    print(f'=> \033[0:33mVocê apresenta sintomas leves que podem significar a Covid-19. \n'
+    return(f'=> \033[0:33mVocê apresenta sintomas leves que podem significar a Covid-19. \n'
           f'    Mantenha o isolamento total por 14 dias. \n'
           f'    Se apresentar quadro de febre ou dores no peito, procure o sistema de \n'
           f'    saúde imediatamente relatando os sintomas apresentados.\033[m')
 
 
 def msgsemsintomas():
-    print(f'=> \033[0:32mVocê não possui nenhum sintoma ou pode ser assintomatico. \n'
+    return(f'=> \033[0:32mVocê não possui nenhum sintoma ou pode ser assintomatico. \n'
           f'    Continue sua quarentena e evite sair de casa sem necessidade.\033[m')
 
 
 def cabeçalhorel():
-    print(f'\033[0:32m{modulo_execucao.dados["nome"]}\033[m, segue o relatório baseado '
+    return(f'\033[0:32m{modulo_execucao.dados["nome"]}\033[m, segue o relatório baseado '
           f'em suas respostas:')
 
 
