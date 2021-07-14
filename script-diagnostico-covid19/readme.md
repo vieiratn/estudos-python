@@ -73,9 +73,13 @@ No momento, não tenho qualquer pretensão de disponibilizar ao público a aplic
 ============================================================================================================
 
 > **Quarta Melhoria**: Melhorar o banco de dados para salvar todas as informações pertinentes ao "paciante".
+
 > **Quinta Melhoria**: Incluir sexo e estado do user afim de melhorar as consultas mais complexas do banco de dados.
+
 > **Sexta Melhoria**: Normalização do banco de dados.
+
 > **Sétima Melhoria**: Criação de uma interface para o script.
+
 > **Oitava Melhoria**: caso o resultado seja 'positivo para covid', coletar o email do user, contar 14 dias e enviar um email para ele refazer a pesquisa.
 
 ============================================================================================================= 
