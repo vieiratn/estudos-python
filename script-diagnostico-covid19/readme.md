@@ -82,4 +82,4 @@ No momento, não tenho qualquer pretensão de disponibilizar ao público a aplic
 
 > **Oitava Melhoria**: caso o resultado seja 'positivo para covid', coletar o email do user, contar 14 dias e enviar um email para ele refazer a pesquisa.
 
-============================================================================================================= 
+============================================================================================================
